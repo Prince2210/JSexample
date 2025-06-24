@@ -2,12 +2,11 @@ class Queue {
   constructor() {
     this.queue = [];
   }
-  
 
   enqueue(element) {
     return this.queue.push(element);
   }
-  denqueue() {
+  dequeue() {
     if (this.isEmpty()) {
       return "Queue is empty";
     }
@@ -36,5 +35,5 @@ queue.enqueue(2);
 queue.enqueue(3);
 queue.enqueue(4);
 queue.enqueue(5);
-console.log(queue.denqueue());
+console.log(queue.dequeue());
 console.log(queue.peek());

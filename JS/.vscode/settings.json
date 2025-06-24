@@ -1,7 +1,8 @@
 {
-    "workbench.colorCustomizations": {
-        "activityBar.background": "#08323B",
-        "titleBar.activeBackground": "#0C4653",
-        "titleBar.activeForeground": "#F2FBFD"
-    }
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#08323B",
+    "titleBar.activeBackground": "#0C4653",
+    "titleBar.activeForeground": "#F2FBFD"
+  },
+  "cSpell.words": ["Deque"]
 }

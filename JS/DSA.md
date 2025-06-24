@@ -1,4 +1,4 @@
-# Data Strcuture and Algorithims
+# Data Structure and Algorithms
 
 ## Linear Data Structure
 
@@ -6,7 +6,7 @@
 - Stacks
 - Linked List
 - Queue
-- Deque (Doubly lnked list)
+- Deque (Doubly linked list)
 
 <details>
   <summary>Stacks</summary>
@@ -36,6 +36,25 @@
 - **Size**: Returns the number of elements in the stack.
 
 - **Clear**: Removes all items from the stack.
+
+</details>
+<details>
+<summary>Linked List</summary>
+
+Linked List is linear Data structure which each node node contains data and information of next node.
+
+### Operation on LinkedList
+
+- **Insert At Head** : Add node at the beginning
+- **Insert At Tail(value)**: Add node at the end
+- **Insert At**: Insert node at a specific index
+- **Delete Head**: Remove the first node
+- **Delete Tail** :Remove the last node
+- **Delete At**: Remove node at a specific index
+- **Search**: Find if a value exists in the list
+- **Traverse**: Visit all nodes and print values
+- **Reverse**: Reverse the linked list
+- **Length** :Return the total number of nodes
 
 </details>
 
