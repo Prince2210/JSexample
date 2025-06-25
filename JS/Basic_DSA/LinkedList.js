@@ -137,16 +137,20 @@ class LinkedList {
 
     while (current !== null) {
       let next = current.next;
-      console.log(next);
       current.next = prev;
-      console.log(current, prev);
       prev = current;
-      console.log(prev);
       current = next;
-      console.log(current);
     }
-
     this.head = prev;
+  }
+  length() {
+    let length = 0;
+    let current = this.head;
+    while (current !== null) {
+      length++;
+      current = current.next;
+    }
+    return length;
   }
 }
 
@@ -161,4 +165,6 @@ list.insertAt(8, 2);
 list.searchData(8);
 console.log(list.traverse());
 list.reverse();
+console.log(list.traverse());
 // console.log(list);
+console.log(list.length());

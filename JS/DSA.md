@@ -41,7 +41,7 @@
 <details>
 <summary>Linked List</summary>
 
-Linked List is linear Data structure which each node node contains data and information of next node.
+Linked List is linear Data structure which each node contains data and information of next node.
 
 ### Operation on LinkedList
 
@@ -57,6 +57,51 @@ Linked List is linear Data structure which each node node contains data and info
 - **Length** :Return the total number of nodes
 
 </details>
+<details>
+  <summary>Doubly Linked List</summary>
+ Doubly Linked List is linear Data structure which each node contains data and information of next node and Previous node.
+
+### Operations on Doubly Linked List
+
+1. #### Insertion
+
+   **Insert At Head** — Add node at the beginning
+
+   **Insert At Tail** — Add node at the end
+
+   **Insert At Index** — Insert at a specific index
+
+2. #### Deletion
+
+   **Remove Head** — Remove the first node
+
+   **Remove Tail** — Remove the last node
+
+   **Remove By Value** — Remove the first node with the given value
+
+   **Remove At Index** — Remove node at a specific index
+
+3. #### Traversal
+
+   **Print Forward** — Traverse from head to tail
+
+   **Print Backward** — Traverse from tail to head
+
+4. #### Search
+
+   **Find** — Returns node if found, otherwise null
+
+   **Contains** — Returns true if found, else false
+
+5. #### Utility
+
+   **Is Empty** — Check if the list is empty
+
+   **Length** — Returns the number of nodes
+
+   **Clear** — Deletes all nodes
+
+</details>
 
 ## Hash Base Data Structure
 
@@ -67,7 +112,7 @@ Linked List is linear Data structure which each node node contains data and info
 
 - Tree
 - Binary Tree
-- Binary Serach Tree (BST)
+- Binary Search Tree (BST)
 - Graphs
 - Trie
 - Heap
