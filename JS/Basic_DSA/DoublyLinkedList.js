@@ -72,6 +72,28 @@ class DoublyLinkedList {
     }
     this.head = node;
   }
+  removeTail() {
+    if (this.tail == null) {
+      return "no dtata";
+    }
+    let tail = this.tail;
+    if (tail.prev.next) {
+      tail.prev.next = null;
+      this.tail = tail.prev;
+    } else {
+      this.tail = null;
+      this.head = null;
+    }
+  }
+  removeByValue(data) {
+    let current = this.head;
+    while (current !== null) {
+      if (current.data == data) {
+        console.log(current);
+      }
+      current = current.next;
+    }
+  }
 }
 let dobList = new DoublyLinkedList();
 dobList.insertAtHead(2);
@@ -80,6 +102,8 @@ dobList.insertAtHead(8);
 dobList.insertAtHead(12);
 dobList.insertAtTail(5);
 // dobList.insertAtIndex(25, 1);
-dobList.removeHead();
-console.log(dobList);
+// dobList.removeHead();
+// dobList.removeTail();
+dobList.removeByValue(4);
+// console.log(dobList);
 // 12 <-> 8 <-> 4 <-> 2 <-> 5
