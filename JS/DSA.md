@@ -227,7 +227,7 @@ A Binary Search Tree is a special type of binary tree where:
 | Insertion | Insert a new value in the correct sorted position.              |
 | Deletion  | Remove a node, handling leaf, one-child, or two-children cases. |
 | Search    | Check whether a value exists in the tree.                       |
-| Traversal | Visit all nodes (e.g., inorder gives sorted order).             |
+| Traversal | Visit all nodes (e.g., in order gives sorted order).            |
 
 ### Important
 
