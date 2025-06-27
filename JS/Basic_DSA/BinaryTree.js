@@ -60,12 +60,51 @@ class BinarySearchTree {
       }
     }
   }
+
+  delete(data) {
+    this.root = this.deleteNode(this.root, data);
+  }
+  deleteNode(node, data) {
+    if (node == null) {
+      return null;
+    }
+    if (node.data > data) {
+      node.left = this.deleteNode(node.left, data);
+      //move to left
+    } else if (node.data < data) {
+      node.right = this.deleteNode(node.right, data);
+      //  move to right
+    } else {
+      // leaf node case
+      if (node.left == null && node.right == null) {
+        return null;
+      }
+      // only right node
+      else if (node.left == null) {
+        return node.right;
+      }
+      // only left node
+      else if (node.right == null) {
+        return node.left;
+      } else {
+        let tempNode = this.findMinNode(node.right);
+        node.data = tempNode.data;
+        node.right = this.deleteNode(node.right, tempNode.data);
+      }
+    }
+    return node;
+  }
+  findMinNode(node) {
+    while (node.left !== null) {
+      node = node.left;
+    }
+    return node;
+  }
 }
 
 let BST = new BinarySearchTree();
-BST.insert(8);
-BST.insert(10);
-BST.insert(11);
-BST.insert(4);
+[8, 4, 12, 2, 6, 10, 14, 1, 3, 5, 7, 9, 11, 13, 15].forEach((val) =>
+  BST.insert(val)
+);
 
 console.log(BST);
