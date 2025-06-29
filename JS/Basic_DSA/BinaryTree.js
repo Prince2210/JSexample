@@ -1,3 +1,4 @@
+let i = 0;
 class BSTNode {
   constructor(data, left = null, right = null) {
     this.data = data;
@@ -70,6 +71,7 @@ class BinarySearchTree {
     }
     if (node.data > data) {
       node.left = this.deleteNode(node.left, data);
+      i++;
       //move to left
     } else if (node.data < data) {
       node.right = this.deleteNode(node.right, data);
@@ -100,11 +102,24 @@ class BinarySearchTree {
     }
     return node;
   }
+  inOrderTraversal() {
+    let result = [];
+    this.inOrder(this.root, result);
+    return result;
+  }
+  inOrder(node, result) {
+    if (node !== null) {
+      this.inOrder(node.left, result);
+      result.push(node.data);
+      this.inOrder(node.right, result);
+    }
+  }
 }
 
 let BST = new BinarySearchTree();
 [8, 4, 12, 2, 6, 10, 14, 1, 3, 5, 7, 9, 11, 13, 15].forEach((val) =>
   BST.insert(val)
 );
+// BST.delete(2);
 
-console.log(BST);
+console.log(BST.inOrderTraversal());
