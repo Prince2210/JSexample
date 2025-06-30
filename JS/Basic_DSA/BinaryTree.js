@@ -1,4 +1,3 @@
-let i = 0;
 class BSTNode {
   constructor(data, left = null, right = null) {
     this.data = data;
@@ -71,7 +70,6 @@ class BinarySearchTree {
     }
     if (node.data > data) {
       node.left = this.deleteNode(node.left, data);
-      i++;
       //move to left
     } else if (node.data < data) {
       node.right = this.deleteNode(node.right, data);
@@ -114,12 +112,83 @@ class BinarySearchTree {
       this.inOrder(node.right, result);
     }
   }
+  preOrderTraversal() {
+    let result = [];
+    this.preOrder(this.root, result);
+    return result;
+  }
+  preOrder(node, result) {
+    if (node !== null) {
+      result.push(node.data);
+      this.preOrder(node.left, result);
+      this.preOrder(node.right, result);
+    }
+  }
+  postOrderTraversal() {
+    let result = [];
+    this.postOrder(this.root, result);
+    return result;
+  }
+  postOrder(node, result) {
+    if (node !== null) {
+      this.postOrder(node.left, result);
+      this.postOrder(node.right, result);
+      result.push(node.data);
+    }
+  }
 }
 
+function depthFirstTraversal(root) {
+  if (root == null) {
+    return;
+  }
+  let stack = [root];
+  let result = [];
+  while (stack.length > 0) {
+    let node = stack.pop();
+    result.push(node.data);
+    if (node.left !== null) {
+      stack.push(node.left);
+    }
+    if (node.right !== null) {
+      stack.push(node.right);
+    }
+  }
+  return result;
+}
+function breadthFirstTraversal(root) {
+  if (root == null) {
+    return;
+  }
+  let queue = [root];
+  let result = [];
+  while (queue.length > 0) {
+    let node = queue.shift();
+    result.push(node.data);
+    if (node.left !== null) {
+      queue.push(node.left);
+    }
+    if (node.right !== null) {
+      queue.push(node.right);
+    }
+  }
+  return result;
+}
+function depthFirstTraversalRecursive(root) {
+  if (root == null) {
+    return [];
+  }
+
+  let leftValues = depthFirstTraversalRecursive(root.left);
+  let rightValues = depthFirstTraversalRecursive(root.right);
+
+  return [root.data, ...leftValues, ...rightValues];
+}
 let BST = new BinarySearchTree();
 [8, 4, 12, 2, 6, 10, 14, 1, 3, 5, 7, 9, 11, 13, 15].forEach((val) =>
   BST.insert(val)
 );
 // BST.delete(2);
 
-console.log(BST.inOrderTraversal());
+// depthFirstTraversalRecursive(BST.root);
+// Array(15)[(8, 4, 2, 1, 3, 6, 5, 7, 12, 10, 9, 11, 14, 13, 15)];
