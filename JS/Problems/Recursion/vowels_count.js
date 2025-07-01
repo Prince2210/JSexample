@@ -10,6 +10,12 @@ function vowelsCount(str) {
   return count;
 }
 
-function vowelsCountRecursive(str) {}
+function vowelsCountRecursive(str) {
+  if (str == "") {
+    return 0;
+  }
+  let isVowel = vowels.includes(str[0]) ? 1 : 0;
+  return isVowel + vowelsCountRecursive(str.slice(1));
+}
 
-console.log(vowelsCount(names));
+console.log(vowelsCountRecursive("recursion"));
