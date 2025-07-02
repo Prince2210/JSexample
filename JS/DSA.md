@@ -232,3 +232,30 @@ A Binary Search Tree is a special type of binary tree where:
 ### Important
 
 </details>
+
+<details>
+<summary>Graphs</summary>
+A graph is a non-linear data structure consisting of:
+
+- Vertices (or nodes) — points
+
+- Edges — connections between points
+
+#### Types of Graphs
+- Directed Graphs
+- Undirected Graph
+### Directed Graphs
+- Edges have direction: (u → v)
+
+- Order matters: (u, v) ≠ (v, u)
+
+- 🧪 Example: Twitter "follows" (A may follow B, but B doesn't have to follow A)
+
+### Undirected Graphs
+
+- Edges have no direction: {u, v}
+
+- Symmetric relationship: if u is connected to v, then v is connected to u
+
+ - 🧪 Example: Facebook "friends"
+</details>

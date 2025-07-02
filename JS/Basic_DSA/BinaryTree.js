@@ -190,5 +190,5 @@ let BST = new BinarySearchTree();
 );
 // BST.delete(2);
 
-// depthFirstTraversalRecursive(BST.root);
-// Array(15)[(8, 4, 2, 1, 3, 6, 5, 7, 12, 10, 9, 11, 14, 13, 15)];
+console.log(depthFirstTraversalRecursive(BST.root));
+Array(15)[(8, 4, 2, 1, 3, 6, 5, 7, 12, 10, 9, 11, 14, 13, 15)];

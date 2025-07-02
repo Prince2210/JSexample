@@ -29,3 +29,24 @@ function balanceParenthesis_rec(parenthesis, index = 0, balance = 0) {
 }
 
 // console.log(balanceParenthesis_rec(arr));
+let arr1 = ["(", "{", "[", "}", "]", ")"];
+function balanceDiffParenthesis(parenthesis) {
+  let stack = [];
+  let open = ["(", "{", "["];
+  let close = [")", "}", "]"];
+  for (let index = 0; index < parenthesis.length; index++) {
+    let element = parenthesis[index];
+    if (open.includes(element)) {
+      stack.push(element);
+    } else {
+      let matchIndex = close.indexOf(element);
+      if (stack.length == 0 || stack[stack.length - 1] !== open[matchIndex]) {
+        return false;
+      } else {
+        stack.pop();
+      }
+    }
+  }
+  return stack.length == 0;
+}
+console.log(balanceDiffParenthesis(arr1));
