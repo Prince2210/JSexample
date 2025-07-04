@@ -19,18 +19,18 @@ for (let i = 0; i < twoD.length; i++) {
     console.log(twoD[i][j]);
   }
 }
-// travesal of every row with foreach
+// traversal of every row with foreach
 
 twoD.forEach((row, i) => {
   console.log(row, `this is ${i + 1} row.`);
 });
-// travesal of every row with for loop
+// traversal of every row with for loop
 
 for (let i = 0; i < twoD.length; i++) {
   console.log(twoD[i]);
 }
 
-// travesal of every col with for loop
+// traversal of every col with for loop
 // let twoD = [
 //   [1, 0, 0, 1],
 //   [0, 1, 1, 0],
