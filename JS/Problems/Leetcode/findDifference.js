@@ -1,11 +1,9 @@
 var findDifference = function (nums1, nums2) {
-  for (let index = 0; index < nums1.length; index++) {
-    const element = nums1[index];
-  }
-
-  for (let index = 0; index < nums2.length; index++) {
-    const element = nums2[index];
-  }
+  const set1 = new Set(nums1);
+  const set2 = new Set(nums2);
+  const unique1 = [...set1].filter((x) => !set2.has(x));
+  const unique2 = [...set2].filter((x) => !set1.has(x));
+  return [unique1, unique2];
 };
 
 let nums1 = [1, 2, 3],
